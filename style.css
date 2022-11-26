@@ -1,0 +1,92 @@
+ *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+body{
+    background: linear-gradient(to right,rgba(131, 36, 150, 0.5),rgba(230, 62, 124, 0.5),rgba(252, 88, 88, 0.5));
+}
+a{
+    text-decoration: none;
+    color:#222;
+}
+ul li{
+    display: inline-block;
+}
+.wrapper{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    background:linear-gradient(32deg, rgba(119, 89, 159, 0.8),rgba(229, 203, 82, 0.8),rgba(40, 40, 40, 0.8));
+}
+
+.wrapper:hover{
+   animation: move1 linear 5s infinite  alternate;
+}
+.header_menu.header_menu_main{
+    height: 50px;
+}
+.header .header_menu .title {
+    display: inline;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    color: #000;
+}
+.header .header_menu .title:hover {
+   color:yellow ;
+}
+.header_menu.header_menu_main ul li{
+    padding: 0 24px;
+}
+
+.header_menu_main ul{
+    display: flex;
+    justify-content: center;
+}
+
+.header_menu_main ul li{
+    margin: 1% 8%;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.header_menu_main ul li ul.sub-nav{
+    display: none;
+}
+
+.header_menu_main ul li:hover{
+    display: block;
+    padding: 5%;
+    padding-right: 30%;
+    position: absolute;
+    top: 100%;
+    left: 3%;
+    background-color: #fff;
+}
+
+ul.sub-nav ul.sub-menu{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes move1{
+    0%{
+        background:linear-gradient(32deg, rgba(119, 89, 159, 0.8),rgba(229, 203, 82, 0.8),rgba(40, 40, 40, 0.8));
+    }
+    100%{
+        background:linear-gradient(72deg, rgba(40, 40, 40, 0.8),rgba(229, 203, 82, 0.8),rgba(119, 89, 159, 0.8),);
+    }
+}
