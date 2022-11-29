@@ -1,4 +1,4 @@
- *{
+*{
     margin: 0;
     padding:0;
     box-sizing: border-box;
@@ -48,29 +48,52 @@ ul li{
     justify-content: center;
 }
 
-.header_menu_main ul li{
-    margin: 1% 8%;
+.header_menu_main> ul >li{
+	display: block;
+	padding: 1% 2% 1% 1%;
+    margin: 0 8%;
     text-transform: uppercase;
     position: relative;
 }
-
-.header_menu_main ul li ul.sub-nav{
-    display: none;
+.header_menu_main li ul.sub-nav li{
+	display: block;
+	margin-top: 3%;
 }
 
-.header_menu_main ul li:hover{
-    display: block;
-    padding: 5%;
-    padding-right: 30%;
+.header_menu_main ul li> ul.sub-nav{
+    display: none;
+	min-width: 100px;
     position: absolute;
-    top: 100%;
-    left: 3%;
-    background-color: #fff;
+    top: 104.5%;
+    left: 0;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0,0,0.3);
 }
 
-ul.sub-nav ul.sub-menu{
-    display: none;
+.header_menu_main ul li:hover {
+	border-bottom: 2px solid black;
 }
+
+.header_menu_main ul> li:hover> ul.sub-nav,
+.header_menu_main ul li ul.sub-nav li:hover ul.sub-menu
+{
+    display: block;
+}
+.header_menu_main ul li ul.sub-nav li ul.sub-menu li{
+	position: relative;
+}
+.header_menu_main ul li ul.sub-menu{
+    display: none;
+	min-width: 100px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0,0,0.3);
+}
+
+
+
 
 
 
